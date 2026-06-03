@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bootstrap 5 - Local files (Exercise 1.2)</title>
+
+        <!--
+      Exercise 1.2: Download Bootstrap 5 files (CSS + JS) and place them under:
+        Day 3/bootstrap-local/bootstrap/
+      Expected paths:
+        bootstrap/css/bootstrap.min.css
+        bootstrap/js/bootstrap.bundle.min.js
+
+      If you place them elsewhere, update the links below.
+    -->
+
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <header class="p-4 bg-dark text-white">
+            <div class="container">
+                <h1 class="h3 mb-1">Bootstrap 5 Setup (Exercise 1.2)</h1>
+                <p class="mb-0 text-white-50">
+                    Using downloaded/local Bootstrap files
+                </p>
+            </div>
+        </header>
+
+        <main class="container py-4">
+            <div class="row g-3">
+                <div class="col-lg-8">
+                    <div class="p-4 bg-light border rounded">
+                        <h2 class="h4">Local Bootstrap working</h2>
+                        <p class="mb-3">
+                            This page is designed to use the locally downloaded
+                            Bootstrap CSS/JS.
+                        </p>
+
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="btn btn-primary" type="button">
+                                Primary
+                            </button>
+                            <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                            >
+                                Secondary
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="alert alert-success mb-0" role="alert">
+                        If styling matches the CDN version, local files are
+                        correct ✅
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
