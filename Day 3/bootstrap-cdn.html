@@ -1,234 +1,433 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bootstrap 5 - CDN (Exercise 1.1)</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap 5 Complete Demo</title>
 
-        <!-- Bootstrap 5 (CDN) -->
+        <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
         />
+
+        <!-- Bootstrap Icons -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+
+        <style>
+            .section {
+                margin-top: 50px;
+            }
+
+            .badge-overlay {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            .fixed-footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
-        <header class="p-4 bg-dark text-white">
+        <!-- ================= NAVBAR ================= -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <h1 class="h3 mb-1">Bootstrap 5 Setup (Exercise 1.1)</h1>
-                <p class="mb-0 text-white-50">Linked via CDN</p>
-            </div>
-        </header>
+                <a class="navbar-brand" href="#">Bootstrap5</a>
 
-        <main class="container py-4">
-            <div class="row g-3">
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Card One</h5>
-                            <p class="card-text">
-                                This layout uses Bootstrap grid + card
-                                components.
-                            </p>
-                            <a href="#" class="btn btn-primary">Action</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Card Two</h5>
-                            <p class="card-text">
-                                Responsive columns stack on smaller screens.
-                            </p>
-                            <a href="#" class="btn btn-outline-primary"
-                                >Details</a
-                            >
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Card Three</h5>
-                            <p class="card-text">
-                                Use Bootstrap utilities and components.
-                            </p>
-                            <button class="btn btn-success" type="button">
-                                Button
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-4">
-                <div class="alert alert-info mb-0" role="alert">
-                    Bootstrap is working
-                </div>
-            </div>
-
-            <!-- 4. Column Layouts and Grid Classes -->
-            <section class="mt-4 p-3 border rounded bg-light">
-                <h2 class="h5 mb-3">4. Column Layouts</h2>
-
-                <!-- Exercise 4.1: sidebar col-md-3 + content col-md-9 -->
-                <div class="row g-3 mb-3">
-                    <div class="col-md-3">
-                        <div class="p-3 bg-secondary text-white rounded">
-                            Sidebar (col-md-3)
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="p-3 bg-white border rounded">
-                            Content area (col-md-9)
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Exercise 4.2: four columns col-sm-3 equal width -->
-                <div class="row g-3">
-                    <div class="col-sm-3">
-                        <div class="p-3 bg-white border rounded text-center">
-                            Col 1 (col-sm-3)
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="p-3 bg-white border rounded text-center">
-                            Col 2 (col-sm-3)
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="p-3 bg-white border rounded text-center">
-                            Col 3 (col-sm-3)
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="p-3 bg-white border rounded text-center">
-                            Col 4 (col-sm-3)
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 5. Alignment and Reordering in Grid -->
-            <section class="mt-4 p-3 border rounded bg-light">
-                <h2 class="h5 mb-3">5. Alignment & Reordering</h2>
-
-                <!-- Exercise 5.1: justify-content-center + align-items-center -->
-                <div class="row g-3" style="min-height: 120px">
-                    <div
-                        class="col-12 d-flex justify-content-center align-items-center"
-                    >
-                        <div class="p-3 bg-primary text-white rounded">
-                            Centered content
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Exercise 5.2: reorder columns using order-md-2, order-md-1 -->
-                <div class="row g-3 mt-1">
-                    <div class="col-12 col-md-6 order-md-2">
-                        <div class="p-3 bg-warning rounded">
-                            Column A (order-md-2)
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 order-md-1">
-                        <div class="p-3 bg-success text-white rounded">
-                            Column B (order-md-1)
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 6. Responsive Flexbox Utilities -->
-            <section class="mt-4 p-3 border rounded bg-light">
-                <h2 class="h5 mb-3">6. Responsive Flexbox Utilities</h2>
-
-                <!-- Exercise 7.1 (Flex): navbar using d-flex, flex-column, flex-md-row -->
-                <nav
-                    class="d-flex flex-column flex-md-row gap-2 gap-md-3 justify-content-center align-items-center"
+                <button
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
                 >
-                    <a class="btn btn-outline-dark" href="#">Home</a>
-                    <a class="btn btn-outline-dark" href="#">About</a>
-                    <a class="btn btn-outline-dark" href="#">Services</a>
-                    <a class="btn btn-outline-dark" href="#">Contact</a>
-                </nav>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <!-- Exercise 7.2 (Flex): justify-content-between + align-items-center in a card -->
-                <div class="card mt-3">
-                    <div
-                        class="card-body d-flex justify-content-between align-items-center"
-                    >
-                        <div>
-                            <h3 class="h6 mb-1">Card Title</h3>
-                            <p class="mb-0 text-muted">
-                                Uses flexbox to space items.
-                            </p>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" placeholder="Search" />
+                        <button class="btn btn-success">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <!-- ================= TYPOGRAPHY ================= -->
+
+            <section class="section">
+                <h1 class="display-1">Display 1</h1>
+
+                <p class="lead">Lead paragraph example</p>
+
+                <p class="fw-bold">Bold Text</p>
+
+                <p class="text-muted">Muted Text</p>
+
+                <p class="text-uppercase">uppercase text</p>
+
+                <p class="text-lowercase">LOWERCASE TEXT</p>
+
+                <p class="text-capitalize">bootstrap typography example</p>
+            </section>
+
+            <!-- ================= GRID SYSTEM ================= -->
+
+            <section class="section">
+                <h2>Responsive Grid</h2>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="bg-primary text-white p-3">Column 1</div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="bg-success text-white p-3">Column 2</div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="bg-danger text-white p-3">Column 3</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SIDEBAR LAYOUT ================= -->
+
+            <section class="section">
+                <h2>Sidebar Layout</h2>
+
+                <div class="row">
+                    <div class="col-md-3 bg-light p-3">Sidebar</div>
+
+                    <div class="col-md-9 bg-secondary text-white p-3">
+                        Content Area
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= FOUR COLUMN LAYOUT ================= -->
+
+            <section class="section">
+                <h2>Four Column Layout</h2>
+
+                <div class="row text-center">
+                    <div class="col-sm-3 bg-warning p-3">1</div>
+                    <div class="col-sm-3 bg-info p-3">2</div>
+                    <div class="col-sm-3 bg-success text-white p-3">3</div>
+                    <div class="col-sm-3 bg-danger text-white p-3">4</div>
+                </div>
+            </section>
+
+            <!-- ================= ALIGNMENT ================= -->
+
+            <section class="section">
+                <h2>Alignment & Reordering</h2>
+
+                <div
+                    class="row justify-content-center align-items-center border"
+                    style="height: 150px"
+                >
+                    <div class="col-3 order-md-2 bg-primary text-white p-3">
+                        Column A
+                    </div>
+
+                    <div class="col-3 order-md-1 bg-success text-white p-3">
+                        Column B
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= FLEXBOX ================= -->
+
+            <section class="section">
+                <h2>Responsive Flexbox</h2>
+
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-center bg-light p-3"
+                >
+                    <h4>Logo</h4>
+
+                    <div>Home | About | Contact</div>
+                </div>
+            </section>
+
+            <!-- ================= FORM ================= -->
+
+            <section class="section">
+                <h2>Registration Form</h2>
+
+                <form>
+                    <div class="mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Full Name"
+                        />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Username"
+                        />
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" />
+
+                        <label class="form-check-label"> Accept Terms </label>
+                    </div>
+
+                    <button class="btn btn-primary">Register</button>
+                </form>
+            </section>
+
+            <!-- ================= FLOATING FORM ================= -->
+
+            <section class="section">
+                <h2>Login Form</h2>
+
+                <div class="form-floating mb-3">
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Email"
+                    />
+
+                    <label for="email"> Email Address </label>
+                </div>
+            </section>
+
+            <!-- ================= BUTTONS ================= -->
+
+            <section class="section">
+                <h2>Buttons</h2>
+
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-warning">Warning</button>
+
+                <hr />
+
+                <button class="btn btn-outline-primary">Outline Primary</button>
+
+                <button class="btn btn-outline-success">Outline Success</button>
+
+                <hr />
+
+                <div class="btn-group">
+                    <button class="btn btn-dark">Left</button>
+                    <button class="btn btn-dark">Middle</button>
+                    <button class="btn btn-dark">Right</button>
+                </div>
+            </section>
+
+            <!-- ================= NAV TABS ================= -->
+
+            <section class="section">
+                <h2>Tabs & Pills</h2>
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active">Tab 1</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link">Tab 2</a>
+                    </li>
+                </ul>
+
+                <br />
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active">Pill 1</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link">Pill 2</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- ================= CARD ================= -->
+
+            <section class="section">
+                <h2>Profile Card</h2>
+
+                <div class="card shadow-lg" style="width: 300px">
+                    <img
+                        src="https://via.placeholder.com/300x150"
+                        class="card-img-top"
+                    />
+
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+
+                        <p class="card-text">Web Developer</p>
+
+                        <button class="btn btn-primary">View Profile</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SPACING ================= -->
+
+            <section class="section">
+                <h2>Spacing Utilities</h2>
+
+                <div class="bg-light m-3 p-2">Margin & Padding Example</div>
+            </section>
+
+            <!-- ================= COLORS ================= -->
+
+            <section class="section">
+                <h2>Colors & Backgrounds</h2>
+
+                <div class="bg-primary text-white p-3 mb-2">
+                    Primary Background
+                </div>
+
+                <div class="bg-warning p-3 mb-2">Warning Background</div>
+
+                <div class="bg-dark bg-gradient text-white p-3">
+                    Dark Gradient
+                </div>
+            </section>
+
+            <!-- ================= VISIBILITY ================= -->
+
+            <section class="section">
+                <h2>Display & Visibility</h2>
+
+                <div class="d-none d-md-block alert alert-success">
+                    Visible on MD and Above
+                </div>
+
+                <div class="d-none d-lg-flex alert alert-primary">
+                    Visible on LG and Above
+                </div>
+            </section>
+
+            <!-- ================= BORDER ================= -->
+
+            <section class="section">
+                <h2>Borders & Rounded Corners</h2>
+
+                <img
+                    src="https://via.placeholder.com/150"
+                    class="border border-primary border-3 rounded-circle"
+                />
+            </section>
+
+            <!-- ================= POSITIONING ================= -->
+
+            <section class="section">
+                <h2>Positioning Utilities</h2>
+
+                <div class="position-relative d-inline-block">
+                    <img src="https://via.placeholder.com/200" />
+
+                    <span class="badge bg-danger badge-overlay"> New </span>
+                </div>
+            </section>
+
+            <!-- ================= ICONS ================= -->
+
+            <section class="section">
+                <h2>Bootstrap Icons</h2>
+
+                <i class="bi bi-facebook fs-1"></i>
+                <i class="bi bi-instagram fs-1"></i>
+                <i class="bi bi-twitter-x fs-1"></i>
+                <i class="bi bi-linkedin fs-1"></i>
+            </section>
+
+            <!-- ================= MODAL ================= -->
+
+            <section class="section">
+                <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#demoModal"
+                >
+                    Open Modal
+                </button>
+            </section>
+
+            <div class="modal fade" id="demoModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Bootstrap Modal</h5>
                         </div>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-primary" type="button">
-                                Save
-                            </button>
+
+                        <div class="modal-body">Modal Popup Example</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= ACCORDION ================= -->
+
+            <section class="section">
+                <h2>Accordion</h2>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
                             <button
-                                class="btn btn-outline-primary"
-                                type="button"
+                                class="accordion-button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#item1"
                             >
-                                Edit
+                                Section 1
                             </button>
+                        </h2>
+
+                        <div
+                            id="item1"
+                            class="accordion-collapse collapse show"
+                        >
+                            <div class="accordion-body">Accordion Content</div>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
 
-            <!-- Typography exercises -->
-            <section class="mt-4 p-3 border rounded bg-light">
-                <h2 class="h5 mb-3">Typography Utilities</h2>
+        <!-- Fixed Footer -->
 
-                <!-- Exercise 7.1 (Typography): display-1, lead, text-muted, fw-bold, etc. -->
-                <div class="p-3 bg-white border rounded mb-3">
-                    <div class="display-1 fw-bold">display-1</div>
-                    <p class="lead mb-2">
-                        This is a lead paragraph using Bootstrap.
-                    </p>
-                    <p class="text-muted mb-2">
-                        text-muted (muted text example)
-                    </p>
-                    <p class="fw-bold mb-2">fw-bold (bold text)</p>
-                    <p class="fw-light text-secondary mb-0">
-                        fw-light + text-secondary
-                    </p>
-                </div>
+        <footer class="fixed-footer bg-dark text-white text-center p-2">
+            Fixed Footer
+        </footer>
 
-                <!-- Exercise 7.2 (Typography): text-uppercase, text-lowercase, text-capitalize -->
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <div class="p-3 bg-white border rounded">
-                            <div class="text-uppercase fw-bold">
-                                This text is uppercase
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-3 bg-white border rounded">
-                            <div class="text-lowercase fw-bold">
-                                THIS TEXT IS lowercase
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-3 bg-white border rounded">
-                            <div class="text-capitalize fw-bold">
-                                this text is capitalize
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Bootstrap 5 JS (CDN) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
