@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TechNova Institute | Home</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+    </head>
+    <body class="bg-light">
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3"
+        >
+            <div class="container">
+                <a
+                    class="navbar-brand fw-bolder text-primary fs-3"
+                    href="index.html"
+                >
+                    <i class="bi bi-mortarboard-fill me-2"></i>TechNova
+                </a>
+                <button
+                    class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="courses.html"
+                                >Courses</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="contact.html"
+                                >Contact</a
+                            >
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a
+                                class="btn btn-primary rounded-pill px-4 shadow-sm"
+                                href="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#loginModal"
+                                >Login</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container py-5 mb-5">
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold text-primary">Get in Touch</h1>
+                <p class="text-muted fs-5">
+                    We're here to answer any questions you have.
+                </p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div
+                        class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white"
+                    >
+                        <h3 class="fw-bold mb-4">Send us a message</h3>
+                        <form
+                            onsubmit="
+                                event.preventDefault();
+                                alert('Message sent successfully!');
+                                this.reset();
+                            "
+                        >
+                            <div class="mb-4">
+                                <label class="form-label text-muted fw-semibold"
+                                    >Your Name</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control bg-light border-0 py-2"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-muted fw-semibold"
+                                    >Your Email</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control bg-light border-0 py-2"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-muted fw-semibold"
+                                    >Your Message</label
+                                >
+                                <textarea
+                                    class="form-control bg-light border-0"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg rounded-pill w-100 fw-bold shadow-sm"
+                            >
+                                <i class="bi bi-send-fill me-2"></i> Send
+                                Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div
+                                class="card border-0 shadow-sm rounded-4 text-center p-4 h-100"
+                            >
+                                <i
+                                    class="bi bi-geo-alt-fill text-primary fs-1 mb-2"
+                                ></i>
+                                <h5 class="fw-bold">Our Location</h5>
+                                <p class="text-muted mb-0">
+                                    123 Education Lane,<br />Tech City, TX 75001
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div
+                                class="card border-0 shadow-sm rounded-4 text-center p-4 h-100"
+                            >
+                                <i
+                                    class="bi bi-telephone-fill text-primary fs-1 mb-2"
+                                ></i>
+                                <h5 class="fw-bold">Contact Info</h5>
+                                <p class="text-muted mb-0">
+                                    +1 234 567 890<br />support@technova.edu
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card border-0 shadow-sm rounded-4 overflow-hidden"
+                    >
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7152203584424!2d-118.243683!3d34.052235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAzJzA4LjAiTiAxMTjCsDE0JzM3LjMiVw!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                                allowfullscreen=""
+                                loading="lazy"
+                                class="border-0"
+                            >
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+            <div class="container text-center text-md-start">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold text-primary">
+                            TechNova
+                        </h5>
+                        <p>
+                            Empowering the next generation of tech leaders
+                            through accessible, hands-on education.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold">Contact</h5>
+                        <p>
+                            <i class="bi bi-house-door-fill me-3"></i> 123 Tech
+                            City, TX 75001
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill me-3"></i>
+                            info@technova.edu
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill me-3"></i> +1 234 567
+                            890
+                        </p>
+                    </div>
+                </div>
+                <hr class="mb-4" />
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p>© 2026 TechNova Institute. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

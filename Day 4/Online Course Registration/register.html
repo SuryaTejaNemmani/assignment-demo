@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TechNova Institute | Home</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+    </head>
+    <body class="bg-light">
+        <nav
+            class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3"
+        >
+            <div class="container">
+                <a
+                    class="navbar-brand fw-bolder text-primary fs-3"
+                    href="index.html"
+                >
+                    <i class="bi bi-mortarboard-fill me-2"></i>TechNova
+                </a>
+                <button
+                    class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-semibold">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="courses.html"
+                                >Courses</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="contact.html"
+                                >Contact</a
+                            >
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a
+                                class="btn btn-primary rounded-pill px-4 shadow-sm"
+                                href="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#loginModal"
+                                >Login</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container py-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div
+                        id="successAlert"
+                        class="alert alert-success border-0 shadow-sm rounded-4 d-none d-flex align-items-center mb-4"
+                        role="alert"
+                    >
+                        <i class="bi bi-check-circle-fill fs-4 me-3"></i>
+                        <div>
+                            <h5 class="alert-heading mb-1 fw-bold">
+                                Registration Successful!
+                            </h5>
+                            <p class="mb-0">
+                                Your application has been received. We will
+                                contact you shortly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card border-0 shadow-lg rounded-4 overflow-hidden"
+                    >
+                        <div
+                            class="card-header bg-primary bg-gradient text-white text-center py-4 border-0"
+                        >
+                            <h2 class="mb-0 fw-bold">
+                                <i class="bi bi-person-plus-fill me-2"></i
+                                >Course Registration
+                            </h2>
+                        </div>
+                        <div class="card-body p-5 bg-white">
+                            <form
+                                onsubmit="
+                                    event.preventDefault();
+                                    document
+                                        .getElementById('successAlert')
+                                        .classList.remove('d-none');
+                                    this.reset();
+                                    window.scrollTo(0, 0);
+                                "
+                            >
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label
+                                            class="form-label fw-semibold text-muted"
+                                            >Full Name</label
+                                        >
+                                        <div class="input-group">
+                                            <span
+                                                class="input-group-text bg-light border-0"
+                                                ><i class="bi bi-person"></i
+                                            ></span>
+                                            <input
+                                                type="text"
+                                                class="form-control bg-light border-0"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label
+                                            class="form-label fw-semibold text-muted"
+                                            >Email Address</label
+                                        >
+                                        <div class="input-group">
+                                            <span
+                                                class="input-group-text bg-light border-0"
+                                                ><i class="bi bi-envelope"></i
+                                            ></span>
+                                            <input
+                                                type="email"
+                                                class="form-control bg-light border-0"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label
+                                            class="form-label fw-semibold text-muted"
+                                            >Mobile Number</label
+                                        >
+                                        <div class="input-group">
+                                            <span
+                                                class="input-group-text bg-light border-0"
+                                                ><i class="bi bi-phone"></i
+                                            ></span>
+                                            <input
+                                                type="tel"
+                                                class="form-control bg-light border-0"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label
+                                            class="form-label fw-semibold text-muted"
+                                            >Gender</label
+                                        >
+                                        <select
+                                            class="form-select bg-light border-0"
+                                            required
+                                        >
+                                            <option value="">Select...</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label
+                                        class="form-label fw-semibold text-muted"
+                                        >Select Course</label
+                                    >
+                                    <select
+                                        class="form-select bg-light border-0 form-select-lg fs-6"
+                                        required
+                                    >
+                                        <option value="">
+                                            Choose a course...
+                                        </option>
+                                        <option>Web Development</option>
+                                        <option>Python Programming</option>
+                                        <option>Data Science</option>
+                                        <option>AI & Machine Learning</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label
+                                        class="form-label fw-semibold text-muted"
+                                        >Highest Qualification</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control bg-light border-0"
+                                        placeholder="e.g. B.Tech, B.Sc"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="mb-4">
+                                    <label
+                                        class="form-label fw-semibold text-muted"
+                                        >Address</label
+                                    >
+                                    <textarea
+                                        class="form-control bg-light border-0"
+                                        rows="3"
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label
+                                        class="form-label fw-semibold text-muted"
+                                        >Upload Resume (PDF/DOCX)</label
+                                    >
+                                    <input
+                                        class="form-control bg-light border-0"
+                                        type="file"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="form-check mb-4 mt-2">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="terms"
+                                        required
+                                    />
+                                    <label
+                                        class="form-check-label text-muted"
+                                        for="terms"
+                                    >
+                                        I agree to the
+                                        <a
+                                            href="#"
+                                            class="text-primary text-decoration-none"
+                                            >Terms & Conditions</a
+                                        >
+                                    </label>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-success btn-lg w-100 rounded-pill fw-bold shadow-sm"
+                                >
+                                    Submit Application
+                                    <i
+                                        class="bi bi-arrow-right-circle ms-2"
+                                    ></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+            <div class="container text-center text-md-start">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold text-primary">
+                            TechNova
+                        </h5>
+                        <p>
+                            Empowering the next generation of tech leaders
+                            through accessible, hands-on education.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold">Contact</h5>
+                        <p>
+                            <i class="bi bi-house-door-fill me-3"></i> 123 Tech
+                            City, TX 75001
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill me-3"></i>
+                            info@technova.edu
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill me-3"></i> +1 234 567
+                            890
+                        </p>
+                    </div>
+                </div>
+                <hr class="mb-4" />
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p>© 2026 TechNova Institute. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
